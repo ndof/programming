@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <iostream>
 #include <utility>
-
 using namespace std;
 
 class BinarySearchTree{
@@ -22,7 +21,6 @@ private:
 			tree_root = new Node(data);
 		}
 		else{
-
 			if(data < root->data){
 				if( root->left == NULL ) root->left = new Node(data);
 				else insert(root->left,data);
@@ -61,15 +59,19 @@ public:
 };
 
 
-int main(){
+
+void test(){
 	BinarySearchTree bst;
 	bst.insert(4);
 	bst.insert(1);
 	bst.insert(5);
 	bst.insert(2);
-
 	bst.in_order();	
 	bst.pre_order();
 	bst.post_order();
+}
+
+int main(){
+	test();
 	return 0;
 }
